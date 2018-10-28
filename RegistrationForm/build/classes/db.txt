@@ -1,0 +1,4 @@
+create table login(username varchar2(50) primary key, password varchar2(20) not null,firstName varchar2(20),
+                        lastName varchar2(20),email varchar2(20),sques varchar2(40),
+                        ans varchar2(20),mobile varchar2(11));
+commit;
