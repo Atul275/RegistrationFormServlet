@@ -3,7 +3,6 @@ package com.login;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.servlet.RequestDispatcher;
@@ -35,15 +34,15 @@ public class Login extends HttpServlet
 				{
 					Connection con=DaoMVC.connect();
 					String sql="select * from login where username=? AND password=?";
-					PreparedStatement pstm=con.prepareStatement(sql);
-					pstm.setString(1, userName);
-					pstm.setString(2, password);
-					ResultSet rs=pstm.executeQuery();
+					PreparedStatement pstmt=con.prepareStatement(sql);
+					pstmt.setString(1, userName);
+					pstmt.setString(2, password);
+					ResultSet rs=pstmt.executeQuery();
 					if(rs.next())
 					{
 						HttpSession session=request.getSession();
 						session.setAttribute("username", userName);
-						response.sendRedirect("homepage.html");
+						response.sendRedirect("welcome.jsp");
 						rd.forward(request, response);
 						out.println("You are successfully login");
 					}

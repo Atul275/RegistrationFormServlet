@@ -6,24 +6,24 @@
 <form action="Login" method="POST">
 	<table style="background-color:skyblue; width: 100%">
 		<tr>
-			<th align="left">UserName<br>
+			<th align="left">*User Name<br>
 				<input type="text" name="username" placeholder="UserName"/>
 			</th>
 			
-			<th align="left">Password<br>
+			<th align="left">*Password<br>
 				<input type="password" name="pw" placeholder="Password"/>
 			</th>
 			<td colspan="2" align="left">
-					<input type="submit" value="Login"class="btn"/>
-<!-- 					<input type="reset" value="Clear"class="btn"/></br> -->
+				<input type="submit" value="Login"class="btn"/>
 			</td>
 		</tr>
 	</table>
 </form>
+
 <center><h1 style="color:purple">New User Registration</h1></center>
 	<form action="Registration" method="post">
 		<table align="center" style="background-color:gold">
-		<tr>
+			<tr>
 				<td>*UserName:</td>
 				<td><input type="text" name="username"></td>
 			</tr>
@@ -43,14 +43,25 @@
 				<td>email:</td>
 				<td><input type="text" name="email"></td>
 			</tr>
+			<tr><td>Country:</td>
+				<td><select name="country" style="width:150px">
+						<option value="">Please Select One</option>
+						<option value="India">India</option>
+						<option value="USA">USA</option>
+						<option value="UK">UK</option>
+						<option value="Other">Other</option>
+					</select></td>
+			</tr>
 			<tr>
 				<td>Security Type:</td>
-				<td><select name="sques">
-					<option value="">Please Select One</option>
-					<option value="What is your pet Name">Your Pet Name</option>
-					<option value="What is your last Name">Your Last Name</option>
-					<option value="What is your first school">Your First School</option>
-				</select></td>
+				<td>
+					<select name="sques">
+						<option value="">Please Select One</option>
+						<option value="What is your pet Name">Your Pet Name</option>
+						<option value="What is your last Name">Your Last Name</option>
+						<option value="What is your first school">Your First School</option>
+					</select>
+				</td>
 			</tr>
 			<tr>
 				<td>Answer:</td>
@@ -61,9 +72,9 @@
 				<td><input type="text" name="mobile"></td>
 			</tr>
 			<tr>
-				<td colspan="2" align="center">
-				<input type="submit" value="Sign Up">
-				<input type="reset" value="Reset">
+				<td colspan = "2" align="center">
+					<input type = "submit" value="Sign Up">
+					<input type = "reset" value="Reset">
 				</td>
 			</tr>
 		</table>

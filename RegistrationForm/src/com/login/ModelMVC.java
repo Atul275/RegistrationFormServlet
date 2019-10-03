@@ -2,20 +2,22 @@ package com.login;
 
 public class ModelMVC 
 {
+	private int id;
 	private String userName;
 	private String password;
 	private String firstName;
 	private String lastName;
 	private String email;
+	private String country;
 	private String ans;
 	private String sques;
 	private String mobile;
 	
-	public void setAns(String ans) {
-		this.ans = ans;
+	public int getId() {
+		return id;
 	}
-	public String getAns() {
-		return ans;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getUserName() {
 		return userName;
@@ -47,6 +49,18 @@ public class ModelMVC
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public String getAns() {
+		return ans;
+	}
+	public void setAns(String ans) {
+		this.ans = ans;
+	}
 	public String getSques() {
 		return sques;
 	}
@@ -58,5 +72,5 @@ public class ModelMVC
 	}
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
-	}
+	}	
 }
